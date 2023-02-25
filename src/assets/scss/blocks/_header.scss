@@ -1,0 +1,453 @@
+@import "src/assets/scss/vars";
+@import "src/assets/scss/mixins";
+
+.header {
+  background-color: $cream;
+  height: 850px;
+
+  overflow: hidden;
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+
+    overflow: hidden;
+
+    &__nav {
+      display: flex;
+      justify-content: space-between;
+
+      width: 420px;
+
+      a {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+
+        padding-bottom: 5px;
+        color: $brown;
+
+        &:hover {
+          border-bottom: 2px solid $brown;
+        }
+      }
+
+      @include lg {
+        width: 340px;
+      }
+
+      @include md {
+        width: 280px;
+      }
+    }
+
+    &__icons {
+      display: flex;
+      justify-content: space-between;
+      margin-right: 5px;
+
+      width: 100px;
+
+      &-liked {
+        position: relative;
+
+        span {
+          position: absolute;
+          top: -5px;
+          right: -7px;
+          content: "1";
+          width: 13px;
+          height: 13px;
+
+          text-align: center;
+          padding-top: 2px;
+
+          border-radius: 50%;
+          background: #E6C8B4;
+
+          font-weight: 400;
+          font-size: 8px;
+          line-height: 9px;
+        }
+      }
+    }
+
+    @include sm {
+      display: block;
+      text-align: center;
+      height: 100%;
+      padding: 20px 0 20px 0;
+
+      .logo {
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      &__nav {
+        display: block;
+        margin: 0 auto 25px auto;
+
+        &-item {
+          margin: 10px 0 10px 0;
+        }
+      }
+
+      &__icons {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &-hero {
+    height: 770px;
+
+    .container {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      height: 100%;
+    }
+
+    span {
+      position: absolute;
+
+      height: 800px;
+      width: 550px;
+      top: -20px;
+      left: 300px;
+
+      border-radius: 50% 0 0 50%;
+      background: linear-gradient(180deg, rgba(234, 227, 212, 0) 0%, #EAE3D4 100%);
+
+      z-index: -1;
+
+      @include lg {
+        height: 700px;
+        width: 450px;
+
+        left: 200px;
+      }
+
+      @include md {
+        height: 500px;
+        width: 250px;
+
+        left: 180px;
+      }
+    }
+
+    img {
+      position: absolute;
+      left: 550px;
+      top: -15px;
+
+      @include lg {
+        width: 450px;
+        height: 700px;
+
+        left: 350px;
+      }
+
+      @include md {
+        width: 300px;
+        height: 500px;
+
+        left: 250px;
+      }
+    }
+
+    &__content {
+      font-family: 'Playfair Display', sans-serif;
+      color: $superBrown;
+      width: 500px;
+      margin-left: 65px;
+      z-index: 1;
+
+      &-title {
+        font-weight: 400;
+        font-size: 45px;
+        line-height: 60px;
+      }
+
+      &-subtitle {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 40px;
+
+        margin-bottom: 40px;
+      }
+
+      &-text {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 21px;
+
+        margin-bottom: 40px;
+
+        color: rgba(27, 26, 23, 0.82);
+      }
+
+      &-button {
+        @include button;
+        background-color: $lightBrown;
+        color: $white;
+
+        &:hover {
+          background-color: $superBrown;
+        }
+      }
+
+      &-price {
+        @include font-size-16px;
+        position: absolute;
+        top: 140px;
+        left: 450px;
+
+        font-family: 'Prata', sans-serif;
+
+        color: $superBrown;
+
+        &:before {
+          @include beforeContent;
+          right: -60px;
+          top: 10px;
+        }
+
+        @include lg {
+          top: 140px;
+          left: 350px;
+
+          font-size: 14px;
+
+          &:before {
+            left: 70px;
+            width: 30px;
+          }
+        }
+        @include md {
+          top: 80px;
+          left: 220px;
+
+          font-size: 12px;
+
+          &:before {
+            left: 60px;
+            width: 30px;
+          }
+        }
+      }
+
+      &-attributes {
+        @include font-size-16px;
+        position: absolute;
+        right: 40px;
+        bottom: 115px;
+
+        font-family: 'Prata', sans-serif;
+
+        color: $superBrown;
+
+        &:before {
+          @include beforeContent;
+          left: -60px;
+          top: 10px;
+        }
+
+        @include lg {
+          right: 10px;
+          bottom: 160px;
+
+          font-size: 14px;
+
+          &:before {
+            left: -40px;
+            width: 30px;
+          }
+        }
+
+        @include md {
+          right: 30px;
+          bottom: 100px;
+
+          font-size: 12px;
+
+          &:before {
+            left: -40px;
+            width: 30px;
+          }
+        }
+      }
+
+      &:before {
+        @include beforeContent;
+        left: 0;
+        top: 265px;
+      }
+
+
+      @include lg {
+        &-title {
+          font-size: 35px;
+          line-height: 60px;
+        }
+
+        &-subtitle {
+          font-size: 25px;
+          line-height: 30px;
+
+          margin-bottom: 30px;
+        }
+
+        &-text {
+          font-size: 13px;
+          margin-bottom: 20px;
+        }
+
+        &-button {
+          width: 160px;
+          height: 40px;
+
+          font-size: 10px;
+        }
+
+        &:before {
+          top: 240px;
+          left: 20px;
+
+          width: 30px;
+        }
+      }
+
+      @include md {
+        margin-left: 35px;
+
+        &-title {
+          font-size: 25px;
+          line-height: 45px;
+        }
+
+        &-subtitle {
+          font-size: 20px;
+          line-height: 30px;
+
+          margin-bottom: 20px;
+        }
+
+        &-text {
+          font-size: 12px;
+
+          margin-bottom: 20px;
+        }
+
+        &-button {
+          width: 105px;
+          height: 32px;
+
+          font-size: 8px;
+        }
+
+        &:before {
+          width: 30px;
+          left: 0;
+          top: 160px;
+        }
+      }
+    }
+
+    @include lg {
+      height: 660px;
+    }
+
+    @include md {
+      height: 480px;
+    }
+  }
+
+  @include lg {
+    height: 750px;
+  }
+
+  @include md {
+    height: 560px;
+  }
+  @include sm {
+    height: 820px;
+
+    &-hero {
+      .container {
+        display: block;
+        text-align: center;
+
+        height: 100%;
+      }
+
+      &__content {
+        width: 100%;
+        margin: 0;
+
+        &:before {
+          top: 25px;
+          left: 90px;
+        }
+
+        &-price {
+          top: 300px;
+          left: 50px;
+        }
+
+        &-attributes {
+          bottom: -50px;
+          right: 20px;
+        }
+      }
+    }
+
+    img {
+      width: 300px;
+      height: 400px;
+
+      left: 80px;
+      top: 200px;
+    }
+  }
+
+  @include v-sm {
+    &-hero {
+      &__content {
+        &:before {
+          left: 20px;
+        }
+
+        &-price {
+          font-size: 10px;
+          top: 300px;
+          left: -5px;
+
+          &:before {
+            left: 50px;
+            width: 10px;
+          }
+        }
+
+        &-attributes {
+          font-size: 10px;
+          bottom: -50px;
+          right: 0;
+
+          &:before {
+            left: -10px;
+            width: 10px;
+          }
+        }
+      }
+    }
+
+    img {
+      left: 5px;
+    }
+  }
+}

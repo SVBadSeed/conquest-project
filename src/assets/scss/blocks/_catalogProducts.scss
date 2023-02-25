@@ -1,0 +1,134 @@
+@import "src/assets/scss/vars";
+@import "src/assets/scss/mixins";
+
+.catalog-products {
+  position: relative;
+  background: linear-gradient(to right, $catalogBg1 39%, $catalogBg2 10%);
+
+  overflow: hidden;
+  padding: 50px 0 20px 0;
+  margin-bottom: 85px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    img {
+      margin-left: 65px;
+
+      @include lg {
+        width: 450px;
+
+        margin-left: 0;
+      }
+    }
+
+    @include md {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    &-title {
+      margin-bottom: 40px;
+
+      @include lg {
+        margin-bottom: 30px;
+      }
+    }
+
+    &-text {
+      @include font-size-16px;
+      margin-bottom: 40px;
+
+      color: #444240;
+
+      @include lg {
+        font-size: 14px;
+      }
+    }
+
+    &-button {
+      @include button;
+
+      color: $white;
+      background: $borderBg;
+
+      &:hover {
+        background: $borderColor;
+        color: $superBrown;
+      }
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+
+    font-family: 'Prata', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    margin: 20px 0 0 0;
+    color: rgba($superBrown, 0.82);
+
+    a {
+      margin: 0 15px 0 15px;
+      font-size: 20px;
+    }
+  }
+
+  &:before {
+    position: absolute;
+    right: -200px;
+    top: -200px;
+
+    z-index: 0;
+    overflow: hidden;
+    content: "";
+
+    width: 450px;
+    height: 450px;
+
+    border: 1px solid $borderBg;
+    border-radius: 50%;
+  }
+
+  &:after {
+    position: absolute;
+    right: -500px;
+    top: 50px;
+
+    z-index: 0;
+    overflow: hidden;
+    content: "";
+
+    width: 750px;
+    height: 750px;
+
+    border: 1px solid $borderBg;
+    border-radius: 50%;
+  }
+
+  @include md {
+    margin-bottom: 45px;
+    &:before {
+      display: none;
+    }
+    &:after {
+      display: none;
+    }
+  }
+
+  @include sm {
+    .container {
+      img {
+        width: 300px;
+      }
+    }
+  }
+}

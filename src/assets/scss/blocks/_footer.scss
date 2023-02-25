@@ -1,0 +1,88 @@
+@import "src/assets/scss/vars";
+@import "src/assets/scss/mixins";
+
+.footer {
+  padding: 80px 0 60px 0;
+  background-color: $lightBrown;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    @include sm {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &-info {
+    color: $white;
+
+    &__logo {
+      margin-bottom: 33px;
+      color: $white;
+      font-size: 14px;
+      line-height: 19px;
+
+      letter-spacing: 0.14em;
+
+      @include sm {
+        display: flex;
+        justify-content: center;
+
+        margin-bottom: 15px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 33px;
+      text-transform: uppercase;
+    }
+
+    &__text {
+      margin-bottom: 15px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+
+      a {
+        color: rgba($white, .75);
+      }
+
+      &:hover {
+        a {
+          color: $white;
+        }
+      }
+    }
+
+    @include md {
+      &__title {
+        margin-bottom: 15px;
+        font-size: 13px;
+        text-transform: uppercase;
+      }
+
+      &__text {
+        margin-bottom: 10px;
+        font-size: 10px;
+        line-height: 14px;
+      }
+    }
+
+    @include sm {
+      &__title {
+        margin-top: 30px;
+      }
+
+    }
+  }
+
+  @include md {
+    padding: 40px 0 30px 0;
+  }
+
+  @include sm {
+    padding: 0 0 15px 0;
+  }
+}

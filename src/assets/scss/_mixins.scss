@@ -1,0 +1,86 @@
+@import "vars";
+
+@mixin font-size-16px {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin beforeContent {
+  display: block;
+  position: absolute;
+
+  background-color: $beforeContent;
+
+  content: '';
+  height: 1px;
+  width: 50px;
+}
+
+@mixin button {
+  width: 205px;
+  height: 64px;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+
+  text-transform: uppercase;
+}
+
+@mixin widthImg150px {
+  width: 150px;
+  height: 150px;
+
+  img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@mixin widthImg110px {
+  width: 110px;
+  height: 120px;
+
+  img {
+    width: 110px;
+    height: 120px;
+  }
+}
+
+@mixin widthImg182px {
+  width: 182px;
+  height: 172px;
+
+  img {
+    width: 182px;
+    height: 172px;
+  }
+}
+
+
+@mixin lg {
+  @media (max-width: map-get($breakpoints, lg)) {
+    @content
+  }
+}
+
+@mixin md {
+  @media (max-width: map-get($breakpoints, md)) {
+    @content
+  }
+}
+
+@mixin sm {
+  @media (max-width: map-get($breakpoints, sm)) {
+    @content
+  }
+}
+
+@mixin v-sm {
+  @media (max-width: map-get($breakpoints, v-sm)) {
+    @content
+  }
+}

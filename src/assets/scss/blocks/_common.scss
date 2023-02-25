@@ -1,0 +1,58 @@
+@import "src/assets/scss/vars";
+@import "src/assets/scss/mixins";
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+
+  @include lg {
+    max-width: 900px;
+  }
+
+  @include md {
+    max-width: 650px;
+  }
+  @include sm {
+    max-width: 450px;
+  }
+  @include v-sm {
+    max-width: 300px;
+  }
+}
+
+.title {
+  font-family: 'Playfair Display', sans-serif;
+
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 43px;
+
+  color: $superBrown;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: $brown;
+
+  font-family: 'Playfair Display', sans-serif;
+
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.14em;
+}
